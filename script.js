@@ -57,7 +57,7 @@ function displayData(dataToDisplay) {
         }
     }
 }
-fetch('ressources/dataProjet.json')
+fetch('ressources/dataImage.json')
     .then(response => response.json())
     .then(jsonData => { data = jsonData;
         console.log('Données chargées:', data);
