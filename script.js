@@ -30,8 +30,7 @@ function displayData(dataToDisplay) {
                 const image = document.createElement('img');
                 image.src = item.lien;
                 image.className = 'postitImage';
-                postit.appendChild(title);
-                postit.appendChild(description);
+                postit.appendChild(image);
                 line.appendChild(postit);
             }
             resultsContainer.appendChild(line);
@@ -48,8 +47,7 @@ function displayData(dataToDisplay) {
                 const image = document.createElement('img');
                 image.src = item.lien;
                 image.className = 'postitImage';
-                postit.appendChild(title);
-                postit.appendChild(description);
+                postit.appendChild(image);
                 line.appendChild(postit);
             }
             resultsContainer.appendChild(line);
