@@ -61,9 +61,7 @@ function displayData(dataToDisplay) {
             linecount++;
         }
     }
-    requestAnimationFrame(() => {
-        window.scrollTo(0, document.body.scrollHeight);
-    });
+    
 }
 fetch('dataImage.json')
     .then(response => response.json())
@@ -73,6 +71,9 @@ fetch('dataImage.json')
     })
     .catch(error => {
         console.error('Erreur lors du chargement des données:', error);
+    });
+    requestAnimationFrame(() => {
+        window.scrollTo(0, document.body.scrollHeight);
     });
 
 //pour chaque post it on veut appliquer une légère rotation aléatoire a gauche ou a droite
