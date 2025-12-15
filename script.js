@@ -61,6 +61,9 @@ function displayData(dataToDisplay) {
             linecount++;
         }
     }
+    requestAnimationFrame(() => {
+        window.scrollTo(0, document.body.scrollHeight);
+    });
 }
 fetch('dataImage.json')
     .then(response => response.json())
