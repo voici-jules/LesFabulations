@@ -4,6 +4,7 @@ const resultsContainer = document.getElementById('resultsContainer');
 function displayData(dataToDisplay) {
     resultsContainer.innerHTML = '';
     let linecount = 0;
+    let postitcount = 0;
 
     //le premier post it est tout seul sur sa ligne
     const firstLine = document.createElement('div');
@@ -11,20 +12,20 @@ function displayData(dataToDisplay) {
     const firstPostit = document.createElement('div');
     firstPostit.className = 'postit';
     const firstImage = document.createElement('img');
-    firstImage.src = dataToDisplay[0].lien;
+    firstImage.src = dataToDisplay[postitcount].lien;
     firstImage.className = 'postitImage';
     firstPostit.appendChild(firstImage);
     firstLine.appendChild(firstPostit);
     resultsContainer.appendChild(firstLine);
     linecount = 1;
 
-        while(linecount < dataToDisplay.length){
+        while(postitcount < dataToDisplay.length){
             while (linecount % 2 === 0) {
             const line = document.createElement('div');
             //on veut créer 4 postits par ligne paires
             line.className = 'linePostit';
             for (let i = 0; i < 4; i++) {
-                const item = dataToDisplay[linecount + i];
+                const item = dataToDisplay[postitcount + i];
                 const postit = document.createElement('div');
                 postit.className = 'postit';
                 const image = document.createElement('img');
@@ -34,14 +35,15 @@ function displayData(dataToDisplay) {
                 line.appendChild(postit);
             }
             resultsContainer.appendChild(line);
-            linecount += 4;
+            postitcount += 4;
+            linecount++;
         }
         while (linecount % 2 !== 0 ) {
             const line = document.createElement('div');
             //on veut créer 3 postits par ligne impaires
             line.className = 'linePostit';
             for (let i = 0; i < 3; i++) {
-                const item = dataToDisplay[linecount + i];
+                const item = dataToDisplay[postitcount + i];
                 const postit = document.createElement('div');
                 postit.className = 'postit';
                 const image = document.createElement('img');
@@ -51,7 +53,8 @@ function displayData(dataToDisplay) {
                 line.appendChild(postit);
             }
             resultsContainer.appendChild(line);
-            linecount += 3;
+            postitcount += 3;
+            linecount++;
         }
     }
 }
