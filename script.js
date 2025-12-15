@@ -15,9 +15,11 @@ function displayData(dataToDisplay) {
     firstImage.src = dataToDisplay[postitcount].lien;
     firstImage.className = 'postitImage';
     firstPostit.appendChild(firstImage);
+    rotate(firstPostit);
+    postitcount++;
     firstLine.appendChild(firstPostit);
     resultsContainer.appendChild(firstLine);
-    linecount = 1;
+    linecount++;
 
         while(postitcount < dataToDisplay.length){
             while (linecount % 2 === 0) {
@@ -32,6 +34,7 @@ function displayData(dataToDisplay) {
                 image.src = item.lien;
                 image.className = 'postitImage';
                 postit.appendChild(image);
+                rotate(postit);
                 line.appendChild(postit);
             }
             resultsContainer.appendChild(line);
@@ -50,6 +53,7 @@ function displayData(dataToDisplay) {
                 image.src = item.lien;
                 image.className = 'postitImage';
                 postit.appendChild(image);
+                rotate(postit);
                 line.appendChild(postit);
             }
             resultsContainer.appendChild(line);
@@ -67,3 +71,10 @@ fetch('dataImage.json')
     .catch(error => {
         console.error('Erreur lors du chargement des données:', error);
     });
+
+//pour chaque post it on veut appliquer une légère rotation aléatoire a gauche ou a droite
+function rotate(postit){
+    //angle aléa entre 2 et -2 degrés
+    const angle = Math.random() * 4 - 2;
+    postit.style.transform = `rotate(${angle}deg)`;
+}
