@@ -1,0 +1,45 @@
+body {
+    background-color: #fff6eb;
+    font: #0A0010;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 95vh;
+    margin-bottom: 3vh;
+}
+
+header {
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.in_header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: solid 1px #0A0010;
+    padding: 3vh 2vw 3vh 2vw;
+    gap: 2vh;
+}
+h1 {
+    font-size: 5vw;
+    margin: 0;
+    padding-bottom: 4vh;
+    font-style: italic;
+}
+p {
+    font-weight: 400;
+    font-size: 1.25vw;
+    margin: 0;
+}
+.bold {
+    font-size: 1.5vw;
+    font-weight: 900;
+}
