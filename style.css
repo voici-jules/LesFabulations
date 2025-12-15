@@ -33,12 +33,6 @@ h1 {
     padding-bottom: 4vh;
     font-style: italic;
 }
-h2 {
-    font-weight: 300;
-    font-size: 14px;
-    font-style: italic;
-    padding-top: 2vh;
-}
 p {
     font-weight: 400;
     font-size: 1.25vw;
@@ -46,6 +40,7 @@ p {
 }
 a {
     color: rgb(0, 0, 255);
+    font-style: italic;
 }
 .bold {
     font-size: 1.5vw;
@@ -81,6 +76,7 @@ a {
     margin-top: 6vh;
     margin-bottom: 10vh;
 }
+
 
 
 
