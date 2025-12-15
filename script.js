@@ -1,4 +1,5 @@
 let data =[];
+const resultsContainer = document.getElementById('resultsContainer');
 
 function displayData(dataToDisplay) {
     resultsContainer.innerHTML = '';
@@ -17,43 +18,51 @@ function displayData(dataToDisplay) {
     resultsContainer.appendChild(firstLine);
     linecount = 1;
 
-    while(linecount < dataToDisplay.length){
-        while (linecount % 2 === 0) {
-        const line = document.createElement('div');
-        //on veut créer 4 postits par ligne paires
-        line.className = 'linePostit';
-        for (let i = 0; i < 4; i++) {
-            const item = dataToDisplay[linecount + i];
-            const postit = document.createElement('div');
-            postit.className = 'postit';
-            const image = document.createElement('img');
-            image.src = item.lien;
-            image.className = 'postitImage';
-            postit.appendChild(title);
-            postit.appendChild(description);
-            line.appendChild(postit);
+        while(linecount < dataToDisplay.length){
+            while (linecount % 2 === 0) {
+            const line = document.createElement('div');
+            //on veut créer 4 postits par ligne paires
+            line.className = 'linePostit';
+            for (let i = 0; i < 4; i++) {
+                const item = dataToDisplay[linecount + i];
+                const postit = document.createElement('div');
+                postit.className = 'postit';
+                const image = document.createElement('img');
+                image.src = item.lien;
+                image.className = 'postitImage';
+                postit.appendChild(title);
+                postit.appendChild(description);
+                line.appendChild(postit);
+            }
+            resultsContainer.appendChild(line);
+            linecount += 4;
         }
-        resultsContainer.appendChild(line);
-        linecount += 4;
-    }
-    while (linecount % 2 !== 0 ) {
-        const line = document.createElement('div');
-        //on veut créer 4 postits par ligne paires
-        line.className = 'linePostit';
-        for (let i = 0; i < 4; i++) {
-            const item = dataToDisplay[linecount + i];
-            const postit = document.createElement('div');
-            postit.className = 'postit';
-            const image = document.createElement('img');
-            image.src = item.lien;
-            image.className = 'postitImage';
-            postit.appendChild(title);
-            postit.appendChild(description);
-            line.appendChild(postit);
+        while (linecount % 2 !== 0 ) {
+            const line = document.createElement('div');
+            //on veut créer 4 postits par ligne paires
+            line.className = 'linePostit';
+            for (let i = 0; i < 4; i++) {
+                const item = dataToDisplay[linecount + i];
+                const postit = document.createElement('div');
+                postit.className = 'postit';
+                const image = document.createElement('img');
+                image.src = item.lien;
+                image.className = 'postitImage';
+                postit.appendChild(title);
+                postit.appendChild(description);
+                line.appendChild(postit);
+            }
+            resultsContainer.appendChild(line);
+            linecount += 4;
         }
-        resultsContainer.appendChild(line);
-        linecount += 4;
     }
 }
-
-}
+fetch('ressources/dataProjet.json')
+    .then(response => response.json())
+    .then(jsonData => { data = jsonData;
+        console.log('Données chargées:', data);
+        displayData(data);
+    })
+    .catch(error => {
+        console.error('Erreur lors du chargement des données:', error);
+    });
