@@ -26,7 +26,9 @@
     
     <script>
         window.onload = () => {
-            window.scrollTo(0, document.body.scrollHeight);
+            setTimeout(() => {
+                window.scrollTo(0, document.body.scrollHeight);
+            }, 100);
         }
 
         // inversion du scroll (↓ monte, ↑ descend)
