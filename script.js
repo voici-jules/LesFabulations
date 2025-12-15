@@ -38,9 +38,9 @@ function displayData(dataToDisplay) {
         }
         while (linecount % 2 !== 0 ) {
             const line = document.createElement('div');
-            //on veut créer 4 postits par ligne paires
+            //on veut créer 3 postits par ligne impaires
             line.className = 'linePostit';
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 3; i++) {
                 const item = dataToDisplay[linecount + i];
                 const postit = document.createElement('div');
                 postit.className = 'postit';
@@ -51,7 +51,7 @@ function displayData(dataToDisplay) {
                 line.appendChild(postit);
             }
             resultsContainer.appendChild(line);
-            linecount += 4;
+            linecount += 3;
         }
     }
 }
