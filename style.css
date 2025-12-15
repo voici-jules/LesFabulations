@@ -45,8 +45,8 @@ p {
 }
 
 .postit{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background-color:#FFDB25;
     box-shadow: 0px 30px 22px -8px rgba(10, 0, 16, 0.2);
 }

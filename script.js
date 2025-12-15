@@ -11,7 +11,6 @@ window.addEventListener("wheel", function(e) {
     e.preventDefault();
     window.scrollBy(0, -e.deltaY);
 }, {passive:false});
-
 }
 
 function displayData(dataToDisplay) {
