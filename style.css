@@ -4,7 +4,6 @@ body {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 300;
     font-style: normal;
-    width: 95vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -45,3 +44,4 @@ p {
     font-weight: 900;
 
 }
+
