@@ -1,19 +1,6 @@
 let data =[];
 const resultsContainer = document.getElementById('resultsContainer');
 
-function displayAtBottom(){
-    window.onload = () => {
-    window.scrollTo(0, document.body.scrollHeight);
-}
-
-// inversion du scroll (↓ monte, ↑ descend)
-window.addEventListener("wheel", function(e) {
-    e.preventDefault();
-    window.scrollBy(0, -e.deltaY);
-}, {passive:false});
-}
-displayAtBottom();
-
 function displayData(dataToDisplay) {
     resultsContainer.innerHTML = '';
     let linecount = 0;
