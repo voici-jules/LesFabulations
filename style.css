@@ -66,6 +66,7 @@ a {
 .recommencer {
     margin: 8vh 0vh 8vh 0vh;
     font-size: 1.25vw;
+    font-weight: 400;
 }
 .recommencer:hover {
     font-weight: 800;
@@ -99,6 +100,7 @@ a {
     margin-top: 6vh;
     margin-bottom: 10vh;
 }
+
 
 
 
