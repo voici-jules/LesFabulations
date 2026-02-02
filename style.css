@@ -27,31 +27,45 @@ body {
     padding: 3vh 2vw 3vh 2vw;
     gap: 2vh;
 }
+
 h1 {
     font-size: 5vw;
     margin: 0;
     padding-bottom: 4vh;
     font-style: italic;
 }
+
 h2 {
     font-weight: 300;
     font-size: 1vw;
     font-style: italic;
     padding-top: 1vh;
 }
+
 p {
     font-weight: 400;
     font-size: 1.25vw;
     margin: 0;
 }
+
 a {
     color: rgb(0, 0, 255);
     font-weight: 400;
 }
+
 .bold {
     font-size: 1.5vw;
     font-weight: 900;
 
+}
+
+.recommencement{
+    display: flex;
+    justify-content: center;
+}
+.recommencer{
+    margin: 8vh 0vh 8vh 0vh;
+    font-size: 1.25vw;
 }
 
 .postit{
@@ -82,6 +96,7 @@ a {
     margin-top: 6vh;
     margin-bottom: 10vh;
 }
+
 
 
 
