@@ -59,13 +59,16 @@ a {
 
 }
 
-.recommencement{
+.recommencement {
     display: flex;
     justify-content: center;
 }
-.recommencer{
+.recommencer {
     margin: 8vh 0vh 8vh 0vh;
     font-size: 1.25vw;
+}
+.recommencer:hover {
+    font-weight: 800;
 }
 
 .postit{
@@ -96,6 +99,7 @@ a {
     margin-top: 6vh;
     margin-bottom: 10vh;
 }
+
 
 
 
